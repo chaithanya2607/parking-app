@@ -23,7 +23,7 @@ export default function Checkout() {
     <div className="home">
       <div className="container">
         <div className="py-4">
-          <h1 className="text-center text-light">List of Vehicles</h1>
+          <h1 className="text-center text-light">Current Garage Vehicles</h1>
 
           <table className="table table-light table-striped border shadow mt-4">
             <thead>
@@ -43,25 +43,8 @@ export default function Checkout() {
                   <td>{use.vehiclenumber}</td>
                   <td>{use.checkindate}</td>
                   <td>{use.checkintime}</td>
-                  <td>
-                    <IconButton
-                      onClick={() => {
-                        navigate(`/${use.id}`);
-                      }}
-                      className="btn btn-primary me-2"
-                    >
-                      <VisibilityIcon color="dark" />
-                    </IconButton>
-                  </td>
-                  <td>
-                    <IconButton
-                      onClick={() => {
-                        navigate(`/edit-user/${use.id}`);
-                      }}
-                    >
-                      <ModeEditIcon color="success" />
-                    </IconButton>
-                  </td>
+                
+               
                   <td>
                     <IconButton
                       onClick={() => {
@@ -71,7 +54,7 @@ export default function Checkout() {
                         ).then(() => getUsers());
                       }}
                     >
-                      <DeleteIcon color="error" />
+                      <button type="button" class="btn btn-danger">Check Out</button>
                     </IconButton>
                   </td>
                 </tr>

@@ -43,8 +43,7 @@ export default function Checkin(){
       }
     })
     .then((data) => data.json())
-    .then(() => navigate("/checkout"));
-
+    .then(() => navigate("/"));
    }
 
    const navigate=useNavigate()
@@ -97,7 +96,7 @@ export default function Checkin(){
            id="checkintime"
            name="checkintime"
        type="time" 
-       value={formik.values.checkindate}
+       value={formik.values.checkintime}
        onChange={formik.handleChange}
        onBlur={formik.handleBlur}
        placeholder="Enter checkin time" 

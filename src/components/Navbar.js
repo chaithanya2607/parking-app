@@ -6,7 +6,7 @@ const Navigate=useNavigate();
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img style={{width:"40px",height:"40px"}} src="https://thatsmyspot.com.au/wp-content/uploads/2019/10/car-400x400.png" alt="img"/></a>
+        <a class="navbar-brand" href="#"><img style={{width:"40px",height:"40px"}} src="https://www.freeiconspng.com/uploads/vehicle-icon-png-car-sedan-4.png" alt="img"/></a>
         <button
           class="navbar-toggler"
           type="button"
