@@ -6,7 +6,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
 
 export default function Checkout() {
-  const [users, setUsers] = useState([]);
+  const [drivers, setDrivers] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function Checkout() {
   const getUsers = () => {
     fetch("https://63234c53bb2321cba916eb6e.mockapi.io/drivers")
       .then((data) => data.json())
-      .then((user) => setUsers(user.reverse()));
+      .then((user) => setDrivers(user));
   };
 
   return (
@@ -36,15 +36,14 @@ export default function Checkout() {
               </tr>
             </thead>
             <tbody>
-              {users.map((use, index) => (
+              {drivers.map((use, index) => (
                 <tr>
                   <th scope="row">{index + 1}</th>
                   <td>{use.drivername}</td>
                   <td>{use.vehiclenumber}</td>
                   <td>{use.checkindate}</td>
                   <td>{use.checkintime}</td>
-                
-               
+
                   <td>
                     <IconButton
                       onClick={() => {
@@ -54,7 +53,9 @@ export default function Checkout() {
                         ).then(() => getUsers());
                       }}
                     >
-                      <button type="button" class="btn btn-danger">Check Out</button>
+                      <button type="button" class="btn btn-danger">
+                        Check Out
+                      </button>
                     </IconButton>
                   </td>
                 </tr>

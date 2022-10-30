@@ -15,7 +15,7 @@ function App() {
         <Route path="/checkin" element={<Checkin />} />
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
